@@ -1,0 +1,10 @@
+tasks:
+  -
+    name: test
+    language: Bash
+    default: true
+    code: |
+      set -e
+      cd source
+      zef install . --deps-only --test-depends --build-depends --/test -to=home
+      zef test .
